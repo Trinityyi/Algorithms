@@ -27,5 +27,12 @@ namespace Algorithms
         {
             data = _data;
         }
+
+        private static void Swap (int posI, int posJ) 
+        {
+            var temp = data[posI];
+            data[posI] = data[posJ];
+            data[posJ] = temp;
+        }
     }
 }
