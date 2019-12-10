@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace BubbleSort
+namespace Algorithms
 {
     class Program
     {
@@ -26,11 +26,7 @@ namespace BubbleSort
                 Console.Write(item + " ");
             }
 
-            Console.Read();
-
-            obj.algorithm.Sort();
-            
-            Console.Read();
+            Sort.BubbleSort();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace BubbleSort
+namespace Algorithms
 {
     public class BubbleSort
     {

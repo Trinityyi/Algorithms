@@ -1,1 +1,1 @@
-# BubbleSort
+# Algorithms
