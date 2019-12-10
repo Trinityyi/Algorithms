@@ -34,5 +34,10 @@ namespace Algorithms
             data[posI] = data[posJ];
             data[posJ] = temp;
         }
+
+        public static void PrintData (string label = "Unsorted List")
+        {
+            Console.WriteLine($"{label}: {String.Join(" ", data.ToArray())}"); 
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace Algorithms
     {
         public static void SelectionSort()
         {
+            Console.WriteLine ("SelectionSort");
             int i, j, minPos;
             int size = data.Count;
 
@@ -24,13 +25,8 @@ namespace Algorithms
                 Swap(minPos,i);
                 Console.WriteLine($"minimum: {data[i]} => swap element at position {minPos} with element at position {i}");
             }
-
-            Console.Write("Sorted Linked List:");
-
-            foreach (var item in data)
-            {
-                Console.Write(item + " ");
-            }
+            
+            PrintData ("Sorted List");
         }
     }
 }

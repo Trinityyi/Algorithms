@@ -8,6 +8,7 @@ namespace Algorithms
     {
         public static void InsertionSort()
         {
+            Console.WriteLine ("InsertionSort");
             int i, j;
             int size = data.Count;
 
@@ -28,12 +29,7 @@ namespace Algorithms
                 }
             }
 
-            Console.Write("Sorted Linked List:");
-
-            foreach (var item in data)
-            {
-                Console.Write(item + " ");
-            }
+            PrintData ("Sorted List");
         }
 
         private static void Insert (int item, int pos) 

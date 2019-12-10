@@ -9,23 +9,36 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Program obj = new Program();
-
-            Console.WriteLine("Enter numbers");
-            
-            string input = Console.ReadLine();
-            string[] tokens = input.Split(" ");
-
-            Sort.Initialize(new List<int>(tokens.Select(int.Parse).ToArray()));
-            
-            Console.Write("Unsorted Linked List: ");
-            foreach (var item in Sort.Data)
+            if(args.Length > 1) 
             {
-                Console.Write(item + " ");
-            }
+                string[] tokens = args.Skip(1).ToArray();
+                Sort.Initialize(new List<int>(tokens.Select(int.Parse).ToArray()));
+                Sort.PrintData();
 
-            Sort.BubbleSort();
+                switch (args[0].ToLower())
+                {
+                    case "bubble":
+                    case "bubblesort":
+                    case "1":
+                        Sort.BubbleSort();
+                        return;
+                    case "insertion":
+                    case "insertionsort":
+                    case "2":
+                        Sort.InsertionSort();
+                        return;
+                    case "selection":
+                    case "selectionsort":
+                    case "3":
+                        Sort.SelectionSort();
+                        return;
+                    default:
+                        return;
+                }
+            }
+            else {
+                Console.WriteLine("Please specify an algorithm and an array of space-separated numbers.");
+            }
         }
     }
 }
-
