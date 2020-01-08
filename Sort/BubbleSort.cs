@@ -16,15 +16,18 @@ namespace Algorithms
             {
                 for (j = 0; j < size - 1; j++)
                 {
+                    IncrementStepCounter();
+                    PrintData("comp", j, j+1);
                     if (data.ElementAt(j).CompareTo(data.ElementAt(j + 1)) > 0)
                     {
+                        IncrementStepCounter();
                         Swap (j, j + 1);
-                        Console.WriteLine($"{data.ElementAt(j + 1)} > {data.ElementAt(j)} = swap element at position {j} with element at position {j+1}");
+                        PrintData("swap", j, j+1);
                     }
                 }
             }
-
-            PrintData ("Sorted List");
+            IncrementStepCounter();
+            PrintData ("exit");
         }
     }
 }
