@@ -32,6 +32,11 @@ namespace Algorithms
                     case "3":
                         Sort.SelectionSort();
                         return;
+                    case "merge":
+                    case "mergesort":
+                    case "4":
+                        Sort.MergeSort();
+                        return;
                     default:
                         return;
                 }
