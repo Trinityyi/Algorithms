@@ -19,17 +19,20 @@ namespace Algorithms
 
                 for (j = i-1; j >= 0 && ins != 1;)
                 {
+                    IncrementStepCounter();
+                    PrintData("comp", j, j+1);
                     if (data.ElementAt(j).CompareTo(current) > 0)
                     {
-                        Console.WriteLine($"{data[j]} > {current} => swap element at position {j+1} with element at position {j}");
+                        IncrementStepCounter();
                         Insert (current, j);
+                        PrintData("swap", j, j+1);
                         j--;
                     }
                     else ins = 1;
                 }
             }
-
-            PrintData ("Sorted List");
+            IncrementStepCounter();
+            PrintData ("exit");
         }
 
         private static void Insert (int item, int pos) 
